@@ -1,7 +1,7 @@
 # Recupe
 is a mobile application designed to help users manage and track their recipe collections efficiently. Whether you're a cooking enthusiast or a professional chef, Recupe provides a seamless way to organize, discover, and share recipes.
 
-
+![logo-removebg-preview](https://github.com/user-attachments/assets/8047c5f8-6220-43b0-a6bb-fec9c286e85f)
 ## Features
  **Recipe Management:**: Easily add, edit, and delete recipes.
 - **Search and Filter:**: Find recipes quickly with robust search and filter options.
@@ -9,6 +9,7 @@ is a mobile application designed to help users manage and track their recipe col
 - **Favorites:** Mark your favorite recipes for quick access.
 - **Offline Access:** Access recipes even without an internet connection.
 - **Social Sharing:** Share recipes with friends and family via social media platforms.
+- **spoonacular api:**
 
 ## Usage
 1. **Add Recipes:** Add your favorite recipes with ingredients, instructions, and images.
