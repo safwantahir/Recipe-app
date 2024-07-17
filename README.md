@@ -14,3 +14,9 @@ is a mobile application designed to help users manage and track their recipe col
 1. **Add Recipes:** Add your favorite recipes with ingredients, instructions, and images.
 2. **Manage Recipes:** Edit, delete, or categorize recipes according to your preferences.
 3. **Search and Explore:** Use search and filter features to find recipes by name, category, or tags.
+
+## ScreenShots
+![1](https://github.com/user-attachments/assets/f606d509-3520-488c-abb7-fb6875d5ba6c)
+![2](https://github.com/user-attachments/assets/1a77b3cb-6df2-4812-872d-ec5fc77110b4)
+![3](https://github.com/user-attachments/assets/6d6f2953-8a68-442e-ba6d-e1c6811a205b)
+![4](https://github.com/user-attachments/assets/85a3116a-a3e1-440d-b171-1501d3c35130)
