@@ -1,4 +1,4 @@
-# Recipe app
+# Recupe
 is a mobile application designed to help users manage and track their recipe collections efficiently. Whether you're a cooking enthusiast or a professional chef, Recupe provides a seamless way to organize, discover, and share recipes.
 
 
