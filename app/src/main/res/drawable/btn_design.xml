@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!-- res/drawable/cardview_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<solid android:color="#FF6117"/> <!-- Greyish color background -->
+<corners android:radius="30dp"/> <!-- Curved corners -->
+<stroke android:width="6dp" android:color="#FFFFFF"/> <!-- Thin white border -->
+</shape>
