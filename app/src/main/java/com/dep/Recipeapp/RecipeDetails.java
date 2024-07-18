@@ -118,7 +118,7 @@ public class RecipeDetails extends AppCompatActivity {
     }
 
     private void getRecipeData(final String recipeId) {
-        String URL = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=dc09dcbc55ee412792987cd07a454800";
+        String URL = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey="put your api here"";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
