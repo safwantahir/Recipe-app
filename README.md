@@ -1,21 +1,16 @@
-# Home Chef
-<p align="center"><img src="screenshots/chef_logo.png" heigth="250" width="250"/></p>
+# Recipe app
+is a mobile application designed to help users manage and track their recipe collections efficiently. Whether you're a cooking enthusiast or a professional chef, Recupe provides a seamless way to organize, discover, and share recipes.
 
-Home Chef is the best solution for people who are bored of the cooking the same four meals every week or tired of ordering food. It is an android application that offers over 360,000 different recipes using <a href=https://spoonacular.com/food-api>Spoonacular API</a>. <br>
-With Home Chef the user can see a random recipes, search recipies by ingredients that are available at home and more.
 
-<p align="center"><img src="screenshots/Homechef.png" heigth="700" width="400" /></p>
+## Features
+ **Recipe Management:**: Easily add, edit, and delete recipes.
+- **Search and Filter:**: Find recipes quickly with robust search and filter options.
+- **Categories and Tags:** Organize recipes into categories and add tags for better categorization.
+- **Favorites:** Mark your favorite recipes for quick access.
+- **Offline Access:** Access recipes even without an internet connection.
+- **Social Sharing:** Share recipes with friends and family via social media platforms.
 
-### Features
-* Easy to Use
-* Search recipes by ingredients or title
-* Save your favorite recipes
-* Filter recipes by type of meal
-* Login to your account from any device
-* Completely free and ad-free
-
-### Technologies
-* Java
-* Android Studio
-* Spoonacular API
-* Firebase
+## Usage
+1. **Add Recipes:** Add your favorite recipes with ingredients, instructions, and images.
+2. **Manage Recipes:** Edit, delete, or categorize recipes according to your preferences.
+3. **Search and Explore:** Use search and filter features to find recipes by name, category, or tags.
