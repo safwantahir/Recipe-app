@@ -1,4 +1,4 @@
-package com.example.homechef;
+package com.dep.Recipeapp;
 
 
 import android.os.Bundle;
@@ -27,8 +27,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class FavoritesFragment extends Fragment {
-    private List<Recipe> lstFavorites;
+public class FavoriteFrag extends Fragment {
+    private List<RecipeMethods> lstFavorites;
     private RecyclerView myrv;
     private DatabaseReference mRootRef;
     private ProgressBar progressBar;
@@ -62,7 +62,7 @@ public class FavoritesFragment extends Fragment {
                     for (Object recipe : favorites.keySet()) {
                         String title = (String) dataSnapshot.child(recipe.toString()).child("title").getValue();
                         String img = (String) dataSnapshot.child(recipe.toString()).child("img").getValue();
-                        lstFavorites.add(new Recipe(recipe.toString(), title, img, 0, 0));
+                        lstFavorites.add(new RecipeMethods(recipe.toString(), title, img, 0, 0));
                     }
                 }
                 progressBar.setVisibility(View.GONE);

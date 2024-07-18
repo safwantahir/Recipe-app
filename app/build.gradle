@@ -4,10 +4,10 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 34
     buildToolsVersion "34.0.0"
-    namespace = "com.example.homechef"
+    namespace = "com.dep.Recipeapp"
 
     defaultConfig {
-        applicationId "com.example.homechef"
+        applicationId "com.dep.Recipeapp"
         minSdkVersion 24
         targetSdkVersion 33
         versionCode 1

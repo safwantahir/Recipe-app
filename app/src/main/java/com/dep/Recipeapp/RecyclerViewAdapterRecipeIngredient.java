@@ -5,7 +5,7 @@ Eliran Naduyev 312089105
 Maria Garber
 */
 
-package com.example.homechef;
+package com.dep.Recipeapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -22,10 +22,10 @@ import java.util.List;
 
 public class RecyclerViewAdapterRecipeIngredient extends RecyclerView.Adapter<RecyclerViewAdapterRecipeIngredient.MyViewHolder> {
     private Context mContext;
-    private List<Ingredient> mData;
+    private List<PresentIngredient> mData;
     public static List<String> ingredientsList;
 
-    RecyclerViewAdapterRecipeIngredient(Context mContext, List<Ingredient> mData) {
+    RecyclerViewAdapterRecipeIngredient(Context mContext, List<PresentIngredient> mData) {
         this.mContext = mContext;
         this.mData = mData;
         ingredientsList = new ArrayList<>();

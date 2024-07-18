@@ -5,7 +5,7 @@ Eliran Naduyev 312089105
 Maria Garber
 */
 
-package com.example.homechef;
+package com.dep.Recipeapp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,9 +22,9 @@ import java.util.List;
 
 public class RecyclerViewAdapterFavorites extends RecyclerView.Adapter<RecyclerViewAdapterFavorites.MyViewHolder> {
     private Context mContext;
-    private List<Recipe> mData;
+    private List<RecipeMethods> mData;
 
-    RecyclerViewAdapterFavorites(Context mContext, List<Recipe> mData) {
+    RecyclerViewAdapterFavorites(Context mContext, List<RecipeMethods> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -49,7 +49,7 @@ public class RecyclerViewAdapterFavorites extends RecyclerView.Adapter<RecyclerV
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, Recipe_Activity.class);
+                Intent intent = new Intent(mContext, RecipeDetails.class);
                 intent.putExtra("id", mData.get(position).getId());
                 intent.putExtra("title",mData.get(position).getTitle());
                 intent.putExtra("img",mData.get(position).getThumbnail());

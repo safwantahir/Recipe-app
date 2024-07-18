@@ -5,17 +5,15 @@ Eliran Naduyev 312089105
 Maria Garber
 */
 
-package com.example.homechef;
+package com.dep.Recipeapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -29,7 +27,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -42,7 +39,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,11 +46,10 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-public class HomeFragment extends Fragment implements View.OnClickListener {
-    private List<Recipe> lstRecipe = new ArrayList<>();
-    private List<Recipe> searchRecipe;
+public class HomeFrag extends Fragment implements View.OnClickListener {
+    private List<RecipeMethods> lstRecipe = new ArrayList<>();
+    private List<RecipeMethods> searchRecipe;
     private JSONArray testArr;
     private ImageButton searchBtn;
     private Button breakfastBtn,lunchBtn,dinnerBtn;
@@ -109,7 +104,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     private void searchRecipe(String search) {
-        searchRecipe = new ArrayList<Recipe>();
+        searchRecipe = new ArrayList<RecipeMethods>();
         String URL="https://api.spoonacular.com/recipes/search?query=" + search + "&number=30&instructionsRequired=true&apiKey=dc09dcbc55ee412792987cd07a454800";
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
@@ -125,7 +120,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                             for (int i = 0; i < testArr.length(); i++) {
                                 JSONObject jsonObject1;
                                 jsonObject1 = testArr.getJSONObject(i);
-                                searchRecipe.add(new Recipe(jsonObject1.optString("id"),jsonObject1.optString("title"), "https://spoonacular.com/recipeImages/" + jsonObject1.optString("image"), Integer.parseInt(jsonObject1.optString("servings")), Integer.parseInt(jsonObject1.optString("readyInMinutes"))));
+                                searchRecipe.add(new RecipeMethods(jsonObject1.optString("id"),jsonObject1.optString("title"), "https://spoonacular.com/recipeImages/" + jsonObject1.optString("image"), Integer.parseInt(jsonObject1.optString("servings")), Integer.parseInt(jsonObject1.optString("readyInMinutes"))));
                             }
                             progressBar.setVisibility(View.GONE);
                             if(searchRecipe.isEmpty()){
@@ -170,7 +165,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                             for (int i = 0; i < testArr.length(); i++) {
                                 JSONObject jsonObject1;
                                 jsonObject1 = testArr.getJSONObject(i);
-                                lstRecipe.add(new Recipe(jsonObject1.optString("id"),jsonObject1.optString("title"), jsonObject1.optString("image"), Integer.parseInt(jsonObject1.optString("servings")), Integer.parseInt(jsonObject1.optString("readyInMinutes"))));
+                                lstRecipe.add(new RecipeMethods(jsonObject1.optString("id"),jsonObject1.optString("title"), jsonObject1.optString("image"), Integer.parseInt(jsonObject1.optString("servings")), Integer.parseInt(jsonObject1.optString("readyInMinutes"))));
                             }
                             progressBar.setVisibility(View.GONE);
                             RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(getContext(), lstRecipe);

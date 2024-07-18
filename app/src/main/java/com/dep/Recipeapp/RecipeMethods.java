@@ -5,10 +5,10 @@ Eliran Naduyev 312089105
 Maria Garber
 */
 
-package com.example.homechef;
+package com.dep.Recipeapp;
 import androidx.annotation.NonNull;
 
-public class Recipe {
+public class RecipeMethods {
 
     private String id;
     private String Title;
@@ -16,7 +16,7 @@ public class Recipe {
     private int amountOfDishes;
     private int readyInMins;
 
-    public Recipe(String id, String title, String thumbnail, int amountOfDishes, int readyInMins) {
+    public RecipeMethods(String id, String title, String thumbnail, int amountOfDishes, int readyInMins) {
         this.id = id;
         Title = title;
         Thumbnail = thumbnail;

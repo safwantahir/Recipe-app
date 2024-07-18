@@ -1,4 +1,4 @@
-package com.example.homechef;
+package com.dep.Recipeapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,13 +38,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Recipe_Activity extends AppCompatActivity {
+public class RecipeDetails extends AppCompatActivity {
 
     private TextView title, ready_in, servings, healthy, instructions;
     private ImageView img, vegeterian;
     private DatabaseReference mRootRef;
     private JSONArray ingredientsArr;
-    private List<Ingredient> ingredientsLst = new ArrayList<>();
+    private List<PresentIngredient> ingredientsLst = new ArrayList<>();
     private RecyclerView myrv;
     private FloatingActionButton fab;
     private boolean like = false;
@@ -52,7 +52,7 @@ public class Recipe_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipe_);
+        setContentView(R.layout.recipe_details);
 
         final Intent intent = getIntent();
         final String recipeId = intent.getStringExtra("id");
@@ -149,7 +149,7 @@ public class Recipe_Activity extends AppCompatActivity {
                             ingredientsArr = response.getJSONArray("extendedIngredients");
                             for (int i = 0; i < ingredientsArr.length(); i++) {
                                 JSONObject jsonObject1 = ingredientsArr.getJSONObject(i);
-                                ingredientsLst.add(new Ingredient(jsonObject1.optString("originalString"), jsonObject1.optString("image")));
+                                ingredientsLst.add(new PresentIngredient(jsonObject1.optString("originalString"), jsonObject1.optString("image")));
                             }
                             RecyclerViewAdapterRecipeIngredient myAdapter = new RecyclerViewAdapterRecipeIngredient(getApplicationContext(), ingredientsLst);
                             myrv.setAdapter(myAdapter);

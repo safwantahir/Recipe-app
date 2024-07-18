@@ -5,7 +5,7 @@ Eliran Naduyev 312089105
 Maria Garber
 */
 
-package com.example.homechef;
+package com.dep.Recipeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -31,12 +31,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchResultsActivity extends AppCompatActivity {
+public class ShowResultsActivity extends AppCompatActivity {
 
     private TextView ingredients_list;
     private RecyclerView myrv;
     private JSONArray testArr;
-    private List<Recipe> lstRecipe = new ArrayList<>();
+    private List<RecipeMethods> lstRecipe = new ArrayList<>();
     private ProgressBar progressBar;
 
 
@@ -69,7 +69,7 @@ public class SearchResultsActivity extends AppCompatActivity {
                             for (int i = 0; i < testArr.length(); i++) {
                                 JSONObject jsonObject1;
                                 jsonObject1 = testArr.getJSONObject(i);
-                                lstRecipe.add(new Recipe(jsonObject1.optString("id"),jsonObject1.optString("title"),jsonObject1.optString("image"), 0, 0));
+                                lstRecipe.add(new RecipeMethods(jsonObject1.optString("id"),jsonObject1.optString("title"),jsonObject1.optString("image"), 0, 0));
                             }
                             progressBar.setVisibility(View.GONE);
                             RecyclerViewAdapterSearchResult myAdapter = new RecyclerViewAdapterSearchResult(getApplicationContext(), lstRecipe);
